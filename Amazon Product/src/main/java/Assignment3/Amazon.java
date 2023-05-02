@@ -73,7 +73,7 @@ public class Amazon {
         try {
             iWait(searchBox, 10);
             searchBox.click();
-            String productId = System.getenv("INPUT_PRODUCT_ID");
+            String productId = System.getProperty("PRODUCT_ID");
             searchBox.sendKeys(productId);
             iWait(searchButton, 10);
             searchButton.click();
