@@ -59,7 +59,7 @@ public class Base {
                 navigate();
             }
             else if(browser.equalsIgnoreCase("Firefox headless")){
-                System.setProperty("webdriver.gecko.driver","src/main/java/resources/drivers/geckodriver");
+                System.setProperty("webdriver.gecko.driver","src/main/java/resources/geckodriver");
                 FirefoxOptions options = new FirefoxOptions();
                 options.setLogLevel(FirefoxDriverLogLevel.TRACE);
                 options.setHeadless(true);
