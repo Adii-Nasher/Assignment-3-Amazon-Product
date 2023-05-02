@@ -27,6 +27,8 @@ jobs:
           distribution: 'adopt'  
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
+      - name: Echo product ID
+      - run: echo "${{ github.event.inputs.product_id }}"
       - name: Run Selenium tests
         run: | 
              cd Amazon\ Product/
