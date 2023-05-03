@@ -6,6 +6,7 @@ on:
       product_id:
         description: 'Product ID'
         required: true
+        default: "B0B3RRWSF6"
   push:
     branches:
       - main
