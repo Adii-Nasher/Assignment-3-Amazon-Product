@@ -96,7 +96,7 @@ public class Amazon {
     public boolean checkBuyNow() {
         try {
             switchToNewWindow(driver);
-            iWait(buyNow, 10);
+            wait.until(ExpectedConditions.visibilityOfAllElements(buyNow));
             System.out.println("Buy button is displayed");
             return buyNow.isDisplayed();
         } catch (WebDriverException e) {
