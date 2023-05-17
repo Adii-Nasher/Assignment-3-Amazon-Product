@@ -84,9 +84,10 @@ public class Amazon {
 
     public void clickProduct() {
         try {
-            List<WebElement> elements = driver.findElements(products);
-                WebElement Element = elements.get(0);
-                Element.click();
+              wait.until(ExpectedConditions.visibilityOfElementLocated(products));
+              List<WebElement> elements = driver.findElements(products);
+              WebElement Element = elements.get(0);
+              Element.click();
         } catch (WebDriverException e) {
             takeScreenshot("clickProduct");
         }
@@ -128,6 +129,7 @@ public class Amazon {
     public void printAllOffers() {
         try {
             switchToNewWindow(driver);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(offer));
             List<WebElement> offersList = driver.findElements(offer);
             for (WebElement offer : offersList) {
                 System.out.println(offer.getText());
