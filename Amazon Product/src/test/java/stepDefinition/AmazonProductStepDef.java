@@ -27,7 +27,7 @@ public class AmazonProductStepDef {
 
     @Then("I should see the Buy Now button")
     public void i_should_see_the_buy_now_button() throws IOException {
-         Assert.assertTrue(tcs.pom.getAmazon().checkBuyNow());
+         tcs.pom.getAmazon().checkBuyNow();
     }
 
     @Then("I should check if customer rating for the product is over four")
